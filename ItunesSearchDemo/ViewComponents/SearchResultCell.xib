@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="87" id="KGk-i7-Jjw" customClass="SearchResultCell" customModule="ItunesSearchDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g01-gZ-xLe">
+                        <rect key="frame" x="276" y="17.5" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="UmL-q6-tm1"/>
+                            <constraint firstAttribute="height" constant="32" id="cQX-AP-tOU"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="icloud.and.arrow.down" catalog="system">
+                            <color key="titleColor" name="AccentColor"/>
+                        </state>
+                    </button>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ESj-Xx-9Gh">
+                        <rect key="frame" x="12" y="8" width="256" height="51"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UAQ-He-NCH">
+                                <rect key="frame" x="0.0" y="0.0" width="51" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UAQ-He-NCH" secondAttribute="height" multiplier="1:1" id="qKS-8n-AkQ"/>
+                                    <constraint firstAttribute="width" constant="51" id="yyZ-kO-LOf"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="kzJ-Sh-z0A">
+                                <rect key="frame" x="59" y="0.0" width="197" height="51"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgB-mT-76a">
+                                        <rect key="frame" x="0.0" y="0.0" width="33" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tV-7B-WJP">
+                                        <rect key="frame" x="0.0" y="34" width="35" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="PJj-40-hF7">
+                        <rect key="frame" x="12" y="63" width="296" height="16"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xNf-G7-pWz">
+                                <rect key="frame" x="0.0" y="6" width="200" height="4"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100% of 1.35MB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHn-Vc-czP">
+                                <rect key="frame" x="204" y="1" width="92" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="g01-gZ-xLe" firstAttribute="leading" secondItem="ESj-Xx-9Gh" secondAttribute="trailing" constant="8" id="QeB-vq-39c"/>
+                    <constraint firstItem="PJj-40-hF7" firstAttribute="top" secondItem="ESj-Xx-9Gh" secondAttribute="bottom" constant="4" id="SPM-Aw-tbc"/>
+                    <constraint firstItem="g01-gZ-xLe" firstAttribute="centerY" secondItem="ESj-Xx-9Gh" secondAttribute="centerY" id="SWi-M3-0VA"/>
+                    <constraint firstItem="ESj-Xx-9Gh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Ybx-Qs-fDH"/>
+                    <constraint firstItem="PJj-40-hF7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="bVL-73-FV9"/>
+                    <constraint firstAttribute="bottom" secondItem="PJj-40-hF7" secondAttribute="bottom" constant="8" id="c2s-R0-Whd"/>
+                    <constraint firstItem="ESj-Xx-9Gh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="hYG-nS-ghP"/>
+                    <constraint firstAttribute="trailing" secondItem="g01-gZ-xLe" secondAttribute="trailing" constant="12" id="k9p-lX-GpZ"/>
+                    <constraint firstAttribute="trailing" secondItem="PJj-40-hF7" secondAttribute="trailing" constant="12" id="sJx-ya-Whc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="artistNameLabel" destination="5tV-7B-WJP" id="pwb-HE-JZG"/>
+                <outlet property="artworkImageView" destination="UAQ-He-NCH" id="Vxn-ib-QC3"/>
+                <outlet property="downloadButton" destination="g01-gZ-xLe" id="UTn-dx-5DL"/>
+                <outlet property="progressLabel" destination="qHn-Vc-czP" id="QMH-IC-Z38"/>
+                <outlet property="progressView" destination="xNf-G7-pWz" id="VnI-Bi-yke"/>
+                <outlet property="trackNameLabel" destination="fgB-mT-76a" id="ag3-pG-pK0"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="116.85267857142857"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icloud.and.arrow.down" catalog="system" width="128" height="112"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
